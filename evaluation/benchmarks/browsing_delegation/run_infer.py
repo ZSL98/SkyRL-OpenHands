@@ -38,7 +38,7 @@ def get_config(
         'max_iterations must be 1 for browsing delegation evaluation.'
     )
     sandbox_config = get_default_sandbox_config_for_eval()
-    sandbox_config.base_container_image = 'python:3.12-bookworm'
+    sandbox_config.base_container_image = 'python:3.11-bookworm'
     config = AppConfig(
         default_agent=metadata.agent_class,
         run_as_openhands=False,
