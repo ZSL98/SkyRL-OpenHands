@@ -28,7 +28,7 @@ from openhands.runtime.utils.runtime_build import (
 )
 
 OH_VERSION = f'oh_v{oh_version}'
-DEFAULT_BASE_IMAGE = 'nikolaik/python-nodejs:python3.12-nodejs22'
+DEFAULT_BASE_IMAGE = 'nikolaik/python-nodejs:python3.11-nodejs22'
 
 
 @pytest.fixture
@@ -140,7 +140,7 @@ def test_generate_dockerfile_build_from_scratch():
     assert 'apt-get update' in dockerfile_content
     assert 'wget curl' in dockerfile_content
     assert 'poetry' in dockerfile_content and '-c conda-forge' in dockerfile_content
-    assert 'python=3.12' in dockerfile_content
+    assert 'python=3.11' in dockerfile_content
 
     # Check the update command
     assert 'COPY ./code/openhands /openhands/code/openhands' in dockerfile_content
@@ -161,7 +161,7 @@ def test_generate_dockerfile_build_from_lock():
     # These commands SHOULD NOT include in the dockerfile if build_from_scratch is False
     assert 'wget curl sudo apt-utils git' not in dockerfile_content
     assert '-c conda-forge' not in dockerfile_content
-    assert 'python=3.12' not in dockerfile_content
+    assert 'python=3.11' not in dockerfile_content
     assert 'https://micro.mamba.pm/install.sh' not in dockerfile_content
     assert 'poetry install' not in dockerfile_content
 
@@ -180,7 +180,7 @@ def test_generate_dockerfile_build_from_versioned():
     # these commands should not exist when build from versioned
     assert 'wget curl sudo apt-utils git' not in dockerfile_content
     assert '-c conda-forge' not in dockerfile_content
-    assert 'python=3.12' not in dockerfile_content
+    assert 'python=3.11' not in dockerfile_content
     assert 'https://micro.mamba.pm/install.sh' not in dockerfile_content
 
     # this SHOULD exist when build from versioned
@@ -200,7 +200,7 @@ def test_get_runtime_image_repo_and_tag_eventstream():
     assert (
         img_repo == f'{get_runtime_image_repo()}'
         and img_tag
-        == f'{OH_VERSION}_image_nikolaik_s_python-nodejs_tag_python3.12-nodejs22'
+        == f'{OH_VERSION}_image_nikolaik_s_python-nodejs_tag_python3.11-nodejs22'
     )
 
     base_image = 'ubuntu'

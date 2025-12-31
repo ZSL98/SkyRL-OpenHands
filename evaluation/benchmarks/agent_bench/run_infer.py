@@ -41,7 +41,7 @@ def get_config(
     metadata: EvalMetadata,
 ) -> AppConfig:
     sandbox_config = get_default_sandbox_config_for_eval()
-    sandbox_config.base_container_image = 'python:3.12-slim'
+    sandbox_config.base_container_image = 'python:3.11-slim'
 
     config = AppConfig(
         default_agent=metadata.agent_class,

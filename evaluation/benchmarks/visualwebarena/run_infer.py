@@ -57,7 +57,7 @@ def get_config(
     assert openai_base_url is not None, 'OPENAI_BASE_URL must be set'
 
     sandbox_config = get_default_sandbox_config_for_eval()
-    sandbox_config.base_container_image = 'python:3.12-bookworm'
+    sandbox_config.base_container_image = 'python:3.11-bookworm'
     sandbox_config.browsergym_eval_env = env_id
     sandbox_config.runtime_startup_env_vars = {
         'BASE_URL': base_url,
