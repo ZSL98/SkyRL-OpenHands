@@ -14,7 +14,7 @@ from openhands.events.action import CmdRunAction
 def test_bash_python_version(temp_dir, runtime_cls, base_container_image):
     """Make sure Python is available in bash."""
     if base_container_image not in [
-        'python:3.12-bookworm',
+        'python:3.11-bookworm',
     ]:
         pytest.skip('This test is only for python-related images')
 

@@ -6,7 +6,7 @@ Ce guide est destiné aux utilisateurs qui souhaitent utiliser leur propre image
 
 Le sandbox est l'endroit où l'agent effectue ses tâches. Au lieu d'exécuter des commandes directement sur votre ordinateur (ce qui pourrait être risqué), l'agent les exécute à l'intérieur d'un conteneur Docker.
 
-Le sandbox OpenHands par défaut (`python-nodejs:python3.12-nodejs22` de [nikolaik/python-nodejs](https://hub.docker.com/r/nikolaik/python-nodejs)) est livré avec certains packages installés comme python et Node.js, mais peut nécessiter d'autres logiciels installés par défaut.
+Le sandbox OpenHands par défaut (`python-nodejs:python3.11-nodejs22` de [nikolaik/python-nodejs](https://hub.docker.com/r/nikolaik/python-nodejs)) est livré avec certains packages installés comme python et Node.js, mais peut nécessiter d'autres logiciels installés par défaut.
 
 Vous avez deux options pour la personnalisation :
 
@@ -22,7 +22,7 @@ Pour créer une image Docker personnalisée, elle doit être basée sur Debian.
 Par exemple, si vous voulez qu'OpenHands ait `ruby` installé, vous pourriez créer un `Dockerfile` avec le contenu suivant :
 
 ```dockerfile
-FROM nikolaik/python-nodejs:python3.12-nodejs22
+FROM nikolaik/python-nodejs:python3.11-nodejs22
 
 # Install required packages
 RUN apt-get update && apt-get install -y ruby

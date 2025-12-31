@@ -72,7 +72,7 @@ Consultez le [code pertinent](https://github.com/All-Hands-AI/OpenHands/blob/mai
 OpenHands utilise un système à trois tags pour ses images runtime afin d'équilibrer reproductibilité et flexibilité.
 Les tags peuvent être dans l'un des 2 formats suivants :
 
-- **Tag versionné** : `oh_v{openhands_version}_{base_image}` (ex. : `oh_v0.9.9_nikolaik_s_python-nodejs_t_python3.12-nodejs22`)
+- **Tag versionné** : `oh_v{openhands_version}_{base_image}` (ex. : `oh_v0.9.9_nikolaik_s_python-nodejs_t_python3.11-nodejs22`)
 - **Tag de verrouillage** : `oh_v{openhands_version}_{16_digit_lock_hash}` (ex. : `oh_v0.9.9_1234567890abcdef`)
 - **Tag source** : `oh_v{openhands_version}_{16_digit_lock_hash}_{16_digit_source_hash}`
   (ex. : `oh_v0.9.9_1234567890abcdef_1234567890abcdef`)
@@ -86,7 +86,7 @@ uniquement pour la source openhands.
 
 Ce hash est construit à partir des 16 premiers chiffres du MD5 de :
 
-- Le nom de l'image de base sur laquelle l'image a été construite (ex. : `nikolaik/python-nodejs:python3.12-nodejs22`)
+- Le nom de l'image de base sur laquelle l'image a été construite (ex. : `nikolaik/python-nodejs:python3.11-nodejs22`)
 - Le contenu du `pyproject.toml` inclus dans l'image.
 - Le contenu du `poetry.lock` inclus dans l'image.
 

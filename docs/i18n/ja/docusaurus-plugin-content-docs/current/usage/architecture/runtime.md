@@ -72,7 +72,7 @@ OpenHandsのランタイムイメージの構築と管理へのアプローチ�
 OpenHandsはランタイムイメージに3つのタグシステムを使用して、再現性と柔軟性のバランスを取っています。
 タグは以下の2つの形式のいずれかになります：
 
-- **バージョンタグ**：`oh_v{openhands_version}_{base_image}`（例：`oh_v0.9.9_nikolaik_s_python-nodejs_t_python3.12-nodejs22`）
+- **バージョンタグ**：`oh_v{openhands_version}_{base_image}`（例：`oh_v0.9.9_nikolaik_s_python-nodejs_t_python3.11-nodejs22`）
 - **ロックタグ**：`oh_v{openhands_version}_{16_digit_lock_hash}`（例：`oh_v0.9.9_1234567890abcdef`）
 - **ソースタグ**：`oh_v{openhands_version}_{16_digit_lock_hash}_{16_digit_source_hash}`
   （例：`oh_v0.9.9_1234567890abcdef_1234567890abcdef`）
@@ -85,7 +85,7 @@ OpenHandsはランタイムイメージに3つのタグシステムを使用し�
 
 このハッシュは以下のMD5の最初の16桁から構築されます：
 
-- イメージが構築されたベースイメージの名前（例：`nikolaik/python-nodejs:python3.12-nodejs22`）
+- イメージが構築されたベースイメージの名前（例：`nikolaik/python-nodejs:python3.11-nodejs22`）
 - イメージに含まれる`pyproject.toml`の内容
 - イメージに含まれる`poetry.lock`の内容
 

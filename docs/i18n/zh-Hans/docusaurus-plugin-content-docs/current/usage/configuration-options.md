@@ -345,7 +345,7 @@ LLM（大型语言模型）配置选项在 `config.toml` 文件的 `[llm]` 部�
 ### 容器镜像
 - `base_container_image`
   - 类型: `str`
-  - 默认值: `"nikolaik/python-nodejs:python3.12-nodejs22"`
+  - 默认值: `"nikolaik/python-nodejs:python3.11-nodejs22"`
   - 描述: 用于沙盒的容器镜像
 
 ### 网络

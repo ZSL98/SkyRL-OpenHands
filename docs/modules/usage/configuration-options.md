@@ -347,7 +347,7 @@ To use these with the docker command, pass in `-e SANDBOX_<option>`. Example: `-
 ### Container Image
 - `base_container_image`
   - Type: `str`
-  - Default: `"nikolaik/python-nodejs:python3.12-nodejs22"`
+  - Default: `"nikolaik/python-nodejs:python3.11-nodejs22"`
   - Description: Container image to use for the sandbox
 
 ### Networking

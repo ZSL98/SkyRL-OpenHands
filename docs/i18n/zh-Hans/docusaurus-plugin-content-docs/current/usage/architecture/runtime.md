@@ -71,7 +71,7 @@ OpenHands 构建和管理运行时镜像的方法确保了在创建和维护生�
 OpenHands 使用三标签系统来平衡其运行时镜像的可重现性和灵活性。
 标签可能采用以下 2 种格式之一：
 
-- **版本标签**：`oh_v{openhands_version}_{base_image}`（例如：`oh_v0.9.9_nikolaik_s_python-nodejs_t_python3.12-nodejs22`）
+- **版本标签**：`oh_v{openhands_version}_{base_image}`（例如：`oh_v0.9.9_nikolaik_s_python-nodejs_t_python3.11-nodejs22`）
 - **锁定标签**：`oh_v{openhands_version}_{16_digit_lock_hash}`（例如：`oh_v0.9.9_1234567890abcdef`）
 - **源码标签**：`oh_v{openhands_version}_{16_digit_lock_hash}_{16_digit_source_hash}`
   （例如：`oh_v0.9.9_1234567890abcdef_1234567890abcdef`）
@@ -84,7 +84,7 @@ OpenHands 使用三标签系统来平衡其运行时镜像的可重现性和灵�
 
 此哈希值由以下内容的 MD5 的前 16 位数字构建：
 
-- 构建镜像所基于的基础镜像的名称（例如：`nikolaik/python-nodejs:python3.12-nodejs22`）
+- 构建镜像所基于的基础镜像的名称（例如：`nikolaik/python-nodejs:python3.11-nodejs22`）
 - 镜像中包含的 `pyproject.toml` 的内容
 - 镜像中包含的 `poetry.lock` 的内容
 
