@@ -346,7 +346,7 @@ Pour les utiliser avec la commande docker, passez `-e SANDBOX_<option>`. Exemple
 ### Image du conteneur
 - `base_container_image`
   - Type: `str`
-  - Défaut: `"nikolaik/python-nodejs:python3.12-nodejs22"`
+  - Défaut: `"nikolaik/python-nodejs:python3.11-nodejs22"`
   - Description: Image de conteneur à utiliser pour le sandbox
 
 ### Réseau

@@ -9,7 +9,7 @@
 （これはリスクがあります）代わりに、エージェントはDockerコンテナ内でコマンドを実行します。
 
 デフォルトのOpenHandsサンドボックス（[nikolaik/python-nodejs](https://hub.docker.com/r/nikolaik/python-nodejs)から
-`python-nodejs:python3.12-nodejs22`）にはpythonやNode.jsなどのパッケージがインストールされていますが、
+`python-nodejs:python3.11-nodejs22`）にはpythonやNode.jsなどのパッケージがインストールされていますが、
 他のソフトウェアをデフォルトでインストールする必要がある場合があります。
 
 カスタマイズには2つの選択肢があります：
@@ -26,7 +26,7 @@
 例えば、OpenHandsに`ruby`をインストールしたい場合、以下の内容で`Dockerfile`を作成できます：
 
 ```dockerfile
-FROM nikolaik/python-nodejs:python3.12-nodejs22
+FROM nikolaik/python-nodejs:python3.11-nodejs22
 
 # 必要なパッケージをインストール
 RUN apt-get update && apt-get install -y ruby

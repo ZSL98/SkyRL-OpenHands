@@ -6,7 +6,7 @@
 
 沙盒是代理执行任务的地方。代理不会直接在您的计算机上运行命令（这可能有风险），而是在Docker容器内运行它们。
 
-默认的OpenHands沙盒（来自[nikolaik/python-nodejs](https://hub.docker.com/r/nikolaik/python-nodejs)的`python-nodejs:python3.12-nodejs22`）预装了一些软件包，如Python和Node.js，但可能需要默认安装其他软件。
+默认的OpenHands沙盒（来自[nikolaik/python-nodejs](https://hub.docker.com/r/nikolaik/python-nodejs)的`python-nodejs:python3.11-nodejs22`）预装了一些软件包，如Python和Node.js，但可能需要默认安装其他软件。
 
 您有两种自定义选项：
 
@@ -22,7 +22,7 @@
 例如，如果您希望OpenHands预装`ruby`，您可以创建一个包含以下内容的`Dockerfile`：
 
 ```dockerfile
-FROM nikolaik/python-nodejs:python3.12-nodejs22
+FROM nikolaik/python-nodejs:python3.11-nodejs22
 
 # Install required packages
 RUN apt-get update && apt-get install -y ruby

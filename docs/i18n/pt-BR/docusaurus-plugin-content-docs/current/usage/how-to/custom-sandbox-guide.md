@@ -8,7 +8,7 @@ com certas ferramentas ou linguagens de programação pré-instaladas.
 O sandbox é onde o agente realiza suas tarefas. Em vez de executar comandos diretamente no seu computador
 (o que poderia ser arriscado), o agente os executa dentro de um contêiner Docker.
 
-O sandbox padrão do OpenHands (`python-nodejs:python3.12-nodejs22`
+O sandbox padrão do OpenHands (`python-nodejs:python3.11-nodejs22`
 do [nikolaik/python-nodejs](https://hub.docker.com/r/nikolaik/python-nodejs)) vem com alguns pacotes instalados como
 python e Node.js, mas pode precisar de outros softwares instalados por padrão.
 
@@ -26,7 +26,7 @@ Para criar uma imagem Docker personalizada, ela deve ser baseada em Debian.
 Por exemplo, se você quiser que o OpenHands tenha `ruby` instalado, você poderia criar um `Dockerfile` com o seguinte conteúdo:
 
 ```dockerfile
-FROM nikolaik/python-nodejs:python3.12-nodejs22
+FROM nikolaik/python-nodejs:python3.11-nodejs22
 
 # Install required packages
 RUN apt-get update && apt-get install -y ruby
